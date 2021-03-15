@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'deep_running.apps.StockConfig'
+    'deep_learning.apps.DeepLearningConfig'
 ]
 
 MIDDLEWARE = [

@@ -17,6 +17,6 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.deep_runing, name="deep_running"),
+    path('', views.deep_learning, name="deep_learning"),
 ]
 
