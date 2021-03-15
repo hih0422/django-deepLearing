@@ -27,6 +27,33 @@
                 </li>
             </ul>
         </div>
+        <div class="login">
+            <div class="collapse navbar-collapse" id="loginMenu">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="loginMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Login
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdown">
+                            <h6 class="dropdown-header d-flex align-items-center">
+                                <div class="dropdown-user-details">
+                                    <div class="dropdown-user-details-name">
+                                        로그인 ID
+                                    </div>
+                                </div>
+                            </h6>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="#">
+                                <div class="dropdown-item-icon">
+                                    <i data-feather="log-out"></i>Logout
+                                </div>
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </nav>
 <div class="main_screen">
@@ -35,5 +62,9 @@
     {% endblock%}
 </div>
 <script src="{% static 'deep_learning/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'deep_learning/js/feather.min.js' %}"></script>
+<script>
+    feather.replace()
+</script>
 </body>
 </html>
