@@ -3,3 +3,6 @@ from django.shortcuts import render
 # Create your views here.
 def deep_learning(request):
     return render(request, 'main.html', {})
+
+def login(request):
+    return render(request, 'auth/login.html', {})

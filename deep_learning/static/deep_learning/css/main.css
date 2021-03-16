@@ -1,6 +1,7 @@
-.login {
-    width:5%
+#login_button a{
+    color:black
 }
+
 .main_screen {
     padding-top: 0;
     color: #000;
@@ -14,6 +15,16 @@
     background-position: center;
 }
 
+@media screen and (max-width: 1440px){
+    .main_screen .main{
+        position: relative;
+        height: calc(100vh - 60px);
+        box-sizing: border-box;
+        color: #fff;
+        background-position: center;
+    }
+}
+
 .main_screen .main .main_img #main_banner_img{
     position: relative;
     overflow: hidden;
@@ -22,10 +33,51 @@
     z-index: 1;
 }
 
+@media screen and (max-width: 1440px){
+    .main_screen .main .main_img{
+        height: 70%;
+    }
+}
+
+
+@media screen and (max-width: 1440px){
+    .main_screen .main .main_img #main_banner_img{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+
 .main_screen .main .main_title{
     position : absolute;
     top : 10%;
     left : 60%;
     z-index : 2;
     font-size : 5rem;
+}
+
+@media screen and (max-width: 1440px){
+    .main_screen .main .main_title{
+        position : absolute;
+        top : 6%;
+        left : 62%;
+        z-index : 2;
+        font-size : 2rem;
+    }
+}
+
+@media (min-width: 400px){
+    .navbar-collapse {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 72%;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .navbar-expand-lg .navbar-collapse{display:-ms-flexbox!important;display:flex!important}
+    .navbar-expand-lg .navbar-nav{-ms-flex-direction:row;flex-direction:row}
+    .mb-lg-0{margin-bottom:0!important}
+    .navbar-expand-lg .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}
+    .navbar-expand-lg .navbar-nav .dropdown-menu{position:absolute}
 }

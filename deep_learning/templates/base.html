@@ -7,64 +7,52 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My dashboard</title>
+
+
+
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Title Here</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown Title
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="login">
-            <div class="collapse navbar-collapse" id="loginMenu">
-                <ul class="navbar-nav me-auto">
+<div id="app">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Title Here</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="loginMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Login
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown Title
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdown">
-                            <h6 class="dropdown-header d-flex align-items-center">
-                                <div class="dropdown-user-details">
-                                    <div class="dropdown-user-details-name">
-                                        로그인 ID
-                                    </div>
-                                </div>
-                            </h6>
-                            <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="#">
-                                <div class="dropdown-item-icon">
-                                    <i data-feather="log-out"></i>Logout
-                                </div>
-                            </a>
-                            </li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
+            {% if user.is_authenticated %}
+            <div id="logout_button">
+                <a href="{% url 'logout' %}">LogOut</a>
+            </div>
+            {% else %}
+            <div id="login_button">
+                <a href="{% url 'login' %}">Login</a>
+            </div>
+            {% endif %}
         </div>
+    </nav>
+    {% block main %}
+    {% endblock %}
+    {% block login %}
+    {% endblock %}
     </div>
-</nav>
-<div class="main_screen">
-    {% block content %}
-
-    {% endblock%}
 </div>
-<script src="{% static 'deep_learning/js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'deep_learning/js/feather.min.js' %}"></script>
-<script>
-    feather.replace()
-</script>
+    <script src="{% static 'deep_learning/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'deep_learning/js/feather.min.js' %}"></script>
+    <script>
+        feather.replace()
+    </script>
+
 </body>
 </html>

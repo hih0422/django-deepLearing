@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -125,9 +124,11 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'deep_learning','static'),
 ]
+
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -135,7 +136,12 @@ STATICFILES_FINDERS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, '.static_root')
 
-
 # Media files for file upload
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# 로그인 성공후 이동하는 URL
+LOGIN_REDIRECT_URL ='/'
+
+#로그아웃 성공후 이동하는 URL
+LOGOUT_REDIRECT_URL ='/'
