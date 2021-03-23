@@ -1,0 +1,29 @@
+[23/Mar/2021 12:44:59] INFO [django.utils.autoreload:617] Watching for file changes with StatReloader
+[23/Mar/2021 12:45:04] INFO [django.utils.autoreload:240] D:\django\deep_learning\views.py changed, reloading.
+[23/Mar/2021 12:45:05] INFO [django.utils.autoreload:617] Watching for file changes with StatReloader
+[23/Mar/2021 12:45:25] INFO [django.utils.autoreload:240] D:\django\deep_learning\views.py changed, reloading.
+[23/Mar/2021 12:45:25] INFO [django.utils.autoreload:617] Watching for file changes with StatReloader
+[23/Mar/2021 12:45:27] INFO [django.server:157] "GET /login HTTP/1.1" 200 3681
+[23/Mar/2021 12:45:29] INFO [django.server:157] "GET /login HTTP/1.1" 200 3681
+[23/Mar/2021 12:45:29] INFO [django.server:157] "GET /static/deep_learning/css/main.css HTTP/1.1" 200 1895
+[23/Mar/2021 12:45:29] INFO [django.server:157] "GET /static/deep_learning/css/bootstrap.min.css HTTP/1.1" 200 124968
+[23/Mar/2021 12:45:29] INFO [django.server:157] "GET /static/deep_learning/js/bootstrap.bundle.min.js HTTP/1.1" 200 80223
+[23/Mar/2021 12:45:29] INFO [django.server:157] "GET /static/deep_learning/js/feather.min.js HTTP/1.1" 200 75256
+[23/Mar/2021 12:45:29] INFO [django.server:157] "GET /static/deep_learning/images/kakao_login_img.png HTTP/1.1" 200 2946
+[23/Mar/2021 12:45:29] WARNING [django.request:224] Not Found: /favicon.ico
+[23/Mar/2021 12:45:29] WARNING [django.server:157] "GET /favicon.ico HTTP/1.1" 404 2949
+[23/Mar/2021 12:45:32] WARNING [django.request:224] Not Found: /api/
+[23/Mar/2021 12:45:32] WARNING [django.server:157] "POST /api/ HTTP/1.1" 404 2929
+[23/Mar/2021 12:45:32] INFO [django.server:157] "GET /kakao_login/ HTTP/1.1" 302 0
+[23/Mar/2021 12:45:32] INFO [django.server:157] "GET /kakao/callback?code=5QinX8JmFw5yYwhVkZnvzsW2GAKcvyszZFtQzHj1lVe1ju3cflJ7FErCL6bWgumliiJIbgo9dJkAAAF4XTAKQQ HTTP/1.1" 301 0
+[23/Mar/2021 12:45:33] ERROR [django.request:224] Internal Server Error: /kakao/callback/
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\deep_learning\views.py", line 56, in kakao_callback
+    profile = kakao_account.get("profile")
+AttributeError: 'NoneType' object has no attribute 'get'
+[23/Mar/2021 12:45:33] ERROR [django.server:157] "GET /kakao/callback/?code=5QinX8JmFw5yYwhVkZnvzsW2GAKcvyszZFtQzHj1lVe1ju3cflJ7FErCL6bWgumliiJIbgo9dJkAAAF4XTAKQQ HTTP/1.1" 500 77035
+[23/Mar/2021 12:45:49] INFO [django.utils.autoreload:240] D:\django\conf\settings.py changed, reloading.

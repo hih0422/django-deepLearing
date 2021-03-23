@@ -21,5 +21,9 @@ urlpatterns = [
     path('', views.deep_learning, name="deep_learning"),
     path('login', auth_views.LoginView.as_view(template_name='auth/login.html'), name="login"),
     path('logout', auth_views.LogoutView.as_view(), name="logout"),
+    path('kakao_login/', views.kakao_login, name="kakao_login"),
+    path('kakao/callback/', views.kakao_callback, name="kakao_callback"),
+
+    # path('api/', views.kakao_login, name="kakaoLogin"),
 ]
 

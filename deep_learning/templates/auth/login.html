@@ -4,7 +4,7 @@
 <div class="login_block">
     <div class="login_page my-3 col-xl-4">
         <div class="login_title">
-            <p>로그인</p>
+            <p>로그인[[title]]</p>
         </div>
         <form method="post" class="post-form" action="{% url 'login' %}">
             {% csrf_token %}
@@ -19,8 +19,22 @@
                        value="{{ form.password.value|default_if_none:'' }}">
             </div>
             <button type="submit" class="btn btn-primary">로그인</button>
-            <img src="{% static 'deep_learning/images/kakao_login_img.png' %}">
+            <a href="kakao_login/"><img src="{% static 'deep_learning/images/kakao_login_img.png' %}"></a>
         </form>
     </div>
 </div>
+<script>
+    axios.defaults.xsrfCookieName = 'csrftoken'
+    axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+
+    new Vue({
+        delimiters: ['[[', ']]'],
+        el: '#app',
+        data: {
+            title: 'Welcome to My Journal'
+        },
+    })
+</script>
 {% endblock %}
+
+
